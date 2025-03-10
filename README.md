@@ -15,9 +15,10 @@
 ```cmd
 git clone https://github.com/xhit-ux/internet-login-script.git
 cd ./internet-login-script
-move .\logins.ps1 %USERPROFILE%\Desktop
+move .\logins.ps1 "$env:USERPROFILE\Desktop"
 cd ..
 del ./internet-login-script
+
 ```
 ### **2️⃣ 编辑脚本**
 - 在**桌面**上找到并左键双击打开`logins.ps1`
