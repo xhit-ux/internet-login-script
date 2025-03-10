@@ -17,7 +17,7 @@ git clone https://github.com/xhit-ux/internet-login-script.git
 cd ./internet-login-script
 move .\logins.ps1 "$env:USERPROFILE\Desktop"
 cd ..
-del ./internet-login-script
+Remove-Item .\internet-login-script\ -Recurse -Force
 
 ```
 ### **2️⃣ 编辑脚本**
