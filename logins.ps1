@@ -1,11 +1,10 @@
-# 获取本机的 IP 地址（适用于 WLAN）
-
+#用户信息
 $user_account=""#请在双引号内填写统一认证账号（学号）
 $user_password=""#请在引号内填写统一认证密码
 
 
 
-
+# 获取本机的 IP 地址（适用于 WLAN）
 $localIP = (Get-NetIPAddress -AddressFamily IPv4 | Where-Object { $_.InterfaceAlias -match "Wi-Fi|WLAN" } | Select-Object -ExpandProperty IPAddress)
 
 # 如果未获取到 Wi-Fi 接口的 IP，则默认使用本机的第一个 IPv4 地址
