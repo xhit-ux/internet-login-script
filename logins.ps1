@@ -28,7 +28,7 @@ if ($response1 -match "上网登录页") {
     $response2 = curl.exe -s -X GET "$second_url" -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0" -H "Accept: */*" -H "Referer: http://192.168.167.42/"
 
     # 检查是否认证成功
-    if ($response2 -match '"result":0') {
+    if ($response2 -match '"result":0' -or $response2 -match '"result":1') {
         Write-Host "登录成功！"
     } else {
         Write-Host "登录失败！"
