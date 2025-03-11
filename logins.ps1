@@ -1,4 +1,4 @@
-#用户信息
+﻿#用户信息
 $user_account=""#请在双引号内填写统一认证账号（学号）
 $user_password=""#请在引号内填写统一认证密码
 
@@ -36,3 +36,4 @@ if ($response1 -match "上网登录页") {
 } else {
     Write-Host "未检测到上网登录页，无需认证。"
 }
+pause
